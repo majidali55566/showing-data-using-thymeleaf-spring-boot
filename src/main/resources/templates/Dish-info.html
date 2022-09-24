@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<style>
+table{
+	background-color:dodger-blue;
+}
+.t-name{
+		padding: 5px;
+    background: #589cdf;
+
+}
+.t-taste{
+		padding: 5px;
+    background: #83b1dd;
+}
+.t-orgin{
+padding: 5px;
+    background: #afcfee;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+		<table>
+    <thead>
+        <tr class="table-info">
+            <td class="t-name"><b>NAME</b> </td>
+            <td class="t-taste"><b>Taste</b> </td>
+            <td class="t-orgin"><b>Orgin</b> </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="dish:${dishes}">
+            <td class="t-name" th:text="${dish.name}">
+            </td><td class="t-taste" th:text="${dish.taste}">
+            </td><td class="t-orgin" th:text="${dish.orgin}">
+       </td></tr>
+     </tbody>
+    </table>
+		
+</body>
+</html>
