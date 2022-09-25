@@ -3,13 +3,38 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+.block-level{
+		display:block
+}
+.container{
+		display:flex
+}
+input[type="text"]{
+		margin-bottom:1rem;
+}
+
+
+</style>
 </head>
 <body>
-
-<h2>Hello Everyone</h2>
-		<form action="list" method="get">
-		<h1>Pakistani famous dishes</h1>
-		<button type="submit">Know</button>
+<h2>Register your new product</h2>
+		<div class="container">
+		<form action="registerBrand" method="post">
+		<div>	
+		<label for="product-name" class="block-level">Prduct Name</label>
+		<input id="product-name" type="text" name="productName">
+		</div>
+		<div>
+		<label for="brand-name" class="block-level">Brand</label>
+		<input id="brand-name" type="text" name="brandName">
+		</div>
+		<div>
+		<label for="product-id" class="block-level">Product type</label>
+		<input type="text" id="product-id" name="productType">
+		</div>
+		<button type="submit">Register</button>
 		</form>
+		</div>
 </body>
 </html>
